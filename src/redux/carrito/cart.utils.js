@@ -5,18 +5,17 @@ export const addItemToCart = (cartItems, cartItemToAdd) => {
   );
   //si existe cartItem entonces no agrego
   if (existingCartItem) {
-    //map devuelve un nuevo array y incremento cant en uno si existe el item si no devuelvo el item como vino
-    console.table(cartItems);
+    console.log('akjdklejflkeflewhfewhfj');
+      //map devuelve un nuevo array y incremento cant en uno si existe el item si no devuelvo el item como vino
     return cartItems.map(cartItem =>
       cartItem.id === cartItemToAdd.id
         ? { ...cartItem, cantidad: cartItem.cantidad + 1 }
-        : { cartItem }
+        : cartItem
     );
-   
   }
- 
-  //si no encontro nada armo un nuevo array con la info y la cantidad hardcode en 1
-
-  return [...cartItems,{...cartItemToAdd, cantidad: 1 }]
-  //ahora importar esta fn en el reducer...
+//si no encontro nada armo un nuevo array con la info y la cantidad hardcode en 1
+  return [...cartItems, { ...cartItemToAdd, cantidad: 1 }];
+   //ahora importar esta fn en el reducer...
 };
+
+
