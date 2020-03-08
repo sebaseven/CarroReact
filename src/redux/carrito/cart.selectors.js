@@ -7,12 +7,26 @@ import { createSelector } from "reselect";
 const selectCart = state => state.cart;
 //segundo selector para extraer solo la propiedad del carrito, recibe dos arg, uno un array de
 //input selectors el segundo arg es una funcion que devuelve el valor que queremnos del selector
-export const selectCartItems = createSelector([selectCart], cart =>cart.cartItems);
+export const selectCartItems = createSelector(
+  [selectCart],
+  cart => cart.cartItems
+);
+// saco la propiedad hidden
+export const selectCartHidden = createSelector(
+  [selectCart],
+  cart => cart.hidden
+);
+
 //vas explotando de apoco hasta llegar al valor necesitado
 export const selectCartItemsCount = createSelector(
-    [selectCartItems], 
-    cartItems => cartItems.reduce(
-        (acumulado,cartItem) => acumulado + cartItem.cantidad,0) 
-        
-    
-    );
+  [selectCartItems],
+  cartItems =>
+    cartItems.reduce((acumulado, cartItem) => acumulado + cartItem.cantidad, 0)
+);
+export const selectCartTotal = createSelector([selectCartItems], cartItems =>
+  cartItems.reduce(
+    (acumulado, cartItem) =>
+    acumulado + cartItem.cantidad * cartItem.price,
+    0
+  )
+);
