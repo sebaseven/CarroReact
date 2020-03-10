@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/CarroReact/static/css/main.8341db17.chunk.css",
+    "main.js": "/CarroReact/static/js/main.acbccfaa.chunk.js",
+    "main.js.map": "/CarroReact/static/js/main.acbccfaa.chunk.js.map",
+    "runtime-main.js": "/CarroReact/static/js/runtime-main.15141ac8.js",
+    "runtime-main.js.map": "/CarroReact/static/js/runtime-main.15141ac8.js.map",
+    "static/js/2.aea9d253.chunk.js": "/CarroReact/static/js/2.aea9d253.chunk.js",
+    "static/js/2.aea9d253.chunk.js.map": "/CarroReact/static/js/2.aea9d253.chunk.js.map",
+    "index.html": "/CarroReact/index.html",
+    "precache-manifest.e07d9eb1b8475c25d78aa454853b7eca.js": "/CarroReact/precache-manifest.e07d9eb1b8475c25d78aa454853b7eca.js",
+    "service-worker.js": "/CarroReact/service-worker.js",
+    "static/css/main.8341db17.chunk.css.map": "/CarroReact/static/css/main.8341db17.chunk.css.map",
+    "static/js/2.aea9d253.chunk.js.LICENSE.txt": "/CarroReact/static/js/2.aea9d253.chunk.js.LICENSE.txt",
+    "static/media/crown.19ef7b17.svg": "/CarroReact/static/media/crown.19ef7b17.svg",
+    "static/media/shopping-bag.svg.30f07071.svg": "/CarroReact/static/media/shopping-bag.svg.30f07071.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.15141ac8.js",
+    "static/js/2.aea9d253.chunk.js",
+    "static/css/main.8341db17.chunk.css",
+    "static/js/main.acbccfaa.chunk.js"
+  ]
+}
