@@ -1,0 +1,15 @@
+npx create-react-app my-app
+cd my-app
+npm start
+yarn add node-sass
+yarn add react-router-dom
+yarn add redux redux-logger react-redux
+yarn add reselect
+yarn add redux-persists
+git remote add origin git@github.com:username/new_repo
+git push -u origin master
+git remote add origin https://github.com/username/new_repo
+git status
+git add -A
+git commit -m "subidas de XXXX"
+git push origin master
