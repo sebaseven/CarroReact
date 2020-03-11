@@ -5,7 +5,7 @@ export const addItemToCart = (cartItems, cartItemToAdd) => {
   );
   //si existe cartItem entonces no agrego
   if (existingCartItem) {
-    console.log('akjdklejflkeflewhfewhfj');
+    
       //map devuelve un nuevo array y incremento cant en uno si existe el item si no devuelvo el item como vino
     return cartItems.map(cartItem =>
       cartItem.id === cartItemToAdd.id
@@ -17,5 +17,20 @@ export const addItemToCart = (cartItems, cartItemToAdd) => {
   return [...cartItems, { ...cartItemToAdd, cantidad: 1 }];
    //ahora importar esta fn en el reducer...
 };
-
+export const removeItemFromCart =(cartItems,cartItemToRemove) => {
+  const existingCartItem = cartItems.find(
+    cartItem => cartItem.id === cartItemToRemove.id
+    
+  );
+  // si ya esta en 1 remuevo el item
+  if (existingCartItem.cantidad === 1){
+    return cartItems.filter(cartItem => cartItem.id !== cartItemToRemove.id )
+  }
+  return cartItems.map(
+    cartItem => 
+    cartItem.id === cartItemToRemove.id ?
+    { ...cartItem, cantidad: cartItem.cantidad - 1 }
+    : cartItem
+  )
+}
 
