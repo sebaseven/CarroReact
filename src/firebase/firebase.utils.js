@@ -1,6 +1,7 @@
-import firebase from "firebase/app";
-import "firebase/auth";
-import "firebase/firestore";
+import firebase from 'firebase/app';
+import 'firebase/firestore';
+import 'firebase/auth';
+
 
 const config = {
   apiKey: "AIzaSyBCIw4lkOqmVpTQqc4ftUZRM9xif4_vITQ",
@@ -12,6 +13,8 @@ const config = {
   appId: "1:915907816183:web:52e57b36d8458e552701f2",
   measurementId: "G-RHDJYEWHZQ"
 };
+firebase.initializeApp(config);
+
 export const createUserProfileDocument = async (userAuth, additionalData) => {
   if (!userAuth) return;
 
@@ -36,13 +39,12 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
 
   return userRef;
 };
-firebase.initializeApp(config);
 
 export const auth = firebase.auth();
 export const firestore = firebase.firestore();
 
 const provider = new firebase.auth.GoogleAuthProvider();
-provider.setCustomParameters({ prompt: "select_account" });
+provider.setCustomParameters({ prompt: 'select_account' });
 export const signInWithGoogle = () => auth.signInWithPopup(provider);
 
 export default firebase;

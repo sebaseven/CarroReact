@@ -1,53 +1,60 @@
 import React from 'react';
-import './directory.styles.scss';
-import '../menu-item/menu-item.component';
+
 import MenuItem from '../menu-item/menu-item.component';
+
+import './directory.styles.scss';
+
 class Directory extends React.Component {
-    constructor() {
-        super();
-        this.state = {
-            secciones: [{
-                title: 'Sombreros',
-                imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
-                id: 1,
-                linkUrl: 'hats'
-            },
-            {
-                title: 'Camperas',
-                imageUrl: 'https://i.ibb.co/px2tCc3/jackets.png',
-                id: 2,
-                linkUrl: 'shop/jackets'
-            },
-            {
-                title: 'Zapatos',
-                imageUrl: 'https://i.ibb.co/0jqHpnp/sneakers.png',
-                id: 3,
-                linkUrl: 'shop/sneakers'
-            },
-            {
-                title: 'Mujer',
-                imageUrl: 'https://i.ibb.co/GCCdy8t/womens.png',
-                size: 'grande',
-                id: 4,
-                linkUrl: 'shop/womens'
-            },
-            {
-                title: 'Hombre',
-                imageUrl: 'https://i.ibb.co/R70vBrQ/men.png',
-                size: 'grande',
-                id: 5,
-                linkUrl: 'shop/mens'
-            }]
+  constructor() {
+    super();
+
+    this.state = {
+      sections: [
+        {
+          title: 'Gorros',
+          imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
+          id: 1,
+          linkUrl: 'hats'
+        },
+        {
+          title: 'Camperas',
+          imageUrl: 'https://i.ibb.co/px2tCc3/jackets.png',
+          id: 2,
+          linkUrl: ''
+        },
+        {
+          title: 'Zapatillas',
+          imageUrl: 'https://i.ibb.co/0jqHpnp/sneakers.png',
+          id: 3,
+          linkUrl: ''
+        },
+        {
+          title: 'Mujer',
+          imageUrl: 'https://i.ibb.co/GCCdy8t/womens.png',
+          size: 'large',
+          id: 4,
+          linkUrl: ''
+        },
+        {
+          title: 'Hombre',
+          imageUrl: 'https://i.ibb.co/R70vBrQ/men.png',
+          size: 'large',
+          id: 5,
+          linkUrl: ''
         }
-    }
-    render() {
-        return (
-            <div className='directory-menu'>
-                {this.state.secciones.map(({ id, ...otherSectionProps }) => (
-                    <MenuItem key={id} {...otherSectionProps}/>
-                ))}
-            </div>
-        )
-    }
+      ]
+    };
+  }
+
+  render() {
+    return (
+      <div className='directory-menu'>
+        {this.state.sections.map(({ id, ...otherSectionProps }) => (
+          <MenuItem key={id} {...otherSectionProps} />
+        ))}
+      </div>
+    );
+  }
 }
+
 export default Directory;

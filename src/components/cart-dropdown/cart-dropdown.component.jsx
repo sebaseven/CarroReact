@@ -5,18 +5,12 @@ import { withRouter } from 'react-router-dom';
 
 import CustomButton from '../custom-button/custom-button.component';
 import CartItem from '../cart-item/cart-item.component';
-import { selectCartItems } from '../../redux/carrito/cart.selectors';
-import { toggleCartHidden } from '../../redux/carrito/cart.actions.js';
-
-
+import { selectCartItems } from '../../redux/cart/cart.selectors';
+import { toggleCartHidden } from '../../redux/cart/cart.actions.js';
 
 import './cart-dropdown.styles.scss';
 //hay que hacer un pulldown desde CartItem por eso hacemos connect
-
-
-const CartDropdown = ({ cartItems, history, dispatch }) => 
-(
-
+const CartDropdown = ({ cartItems, history, dispatch }) => (
   <div className='cart-dropdown'>
     <div className='cart-items'>
       {cartItems.length ? (
@@ -24,7 +18,7 @@ const CartDropdown = ({ cartItems, history, dispatch }) =>
           <CartItem key={cartItem.id} item={cartItem} />
         ))
       ) : (
-        <span className='empty-message'>Carrito vacio</span>
+        <span className='empty-message'>Carrito Vacio!!</span>
       )}
     </div>
     <CustomButton
