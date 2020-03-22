@@ -8,8 +8,3 @@ export const selectCollections = createSelector(
 );
 
 
-export const selectCollection = collectionUrlParam =>
-  createSelector(
-    [selectCollections],
-    collections => collections[collectionUrlParam]
-  );
